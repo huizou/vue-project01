@@ -104,18 +104,13 @@ var vm = new Vue({
         //删除部门
         delBm: function(){
             var $this = this;
-            layer.open({
-                type: 2,
-                title: '提示',
-                area: ['500px','300px'],
-                btnAlign: 'c',
+            layer.confirm('您确定要删除此部门么？',{
                 btn: ['确定','取消'],
-                yes: function(index){
-                    $this.zzjg.splice($this.act,1);
-                    $this.act = $this.act-1>=0 ? ($this.act-1) : 0
-                    layer.close(index);
-                },
-                content: '../blue1-demo/layer-html/del-office-bm.html'
+                title: '提示'
+            },function(index){
+                $this.zzjg.splice($this.act,1);
+                $this.act = $this.act-1>=0 ? ($this.act-1) : 0
+                layer.close(index);
             })
         },
         //打开完善部门信息弹框

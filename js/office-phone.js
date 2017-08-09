@@ -37,17 +37,12 @@ var vm = new Vue({
         //删除电话
         delPhone: function(eq){
             var $this = this;
-            layer.open({
-                type: 2,
-                title: '提示',
-                area: ['500px','300px'],
-                btnAlign: 'c',
+            layer.confirm('您确定要删除此办公电话么？',{
                 btn: ['确定','取消'],
-                yes: function(index){
-                    $this.bgdh.splice(eq,1);
-                    layer.close(index);
-                },
-                content: '../blue1-demo/layer-html/del-office-phone.html'
+                title: '提示'
+            },function(index){
+                $this.bgdh.splice(eq,1);
+                layer.close(index);
             })
         },
         //打开添加电话弹框

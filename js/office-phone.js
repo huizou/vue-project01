@@ -36,14 +36,15 @@ var vm = new Vue({
         },
         //删除电话
         delPhone: function(eq){
-            var $this = this;
-            layer.confirm('您确定要删除此办公电话么？',{
-                btn: ['确定','取消'],
-                title: '提示'
-            },function(index){
-                $this.bgdh.splice(eq,1);
-                layer.close(index);
-            })
+//             var $this = this;
+//             layer.confirm('您确定要删除此办公电话么？',{
+//                 btn: ['确定','取消'],
+//                 title: '提示'
+//             },function(index){
+//                 $this.bgdh.splice(eq,1);
+//                 layer.close(index);
+//             })
+            alert(1)
         },
         //打开添加电话弹框
         openAddPhoneLayer: function(){

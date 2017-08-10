@@ -44,7 +44,7 @@ var vm = new Vue({
 //                 $this.bgdh.splice(eq,1);
 //                 layer.close(index);
 //             })
-            alert(1)
+            console.log(1)
         },
         //打开添加电话弹框
         openAddPhoneLayer: function(){
